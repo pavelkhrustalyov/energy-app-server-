@@ -22,6 +22,7 @@ app.use((req, res, next) => {
 const database = require('./database/db');
 
 app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
